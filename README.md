@@ -1,16 +1,23 @@
 UICollectionView stretch header like Twitter
 --------------
-[![Swift Version][swift-image]][swift-url]
-[![License][license-image]][license-url]
+[![Swift Version](https://img.shields.io/badge/swift-3.0-green.svg)](https://github.com/jackloverde/UICollectionView-stretch-header-like-Twitter)
+[![XCode Version](https://img.shields.io/badge/XCode-8.3.2-orange.svg)](https://github.com/jackloverde/UICollectionView-stretch-header-like-Twitter)
+[![License](https://img.shields.io/badge/License-GNU-green.svg)](https://github.com/jackloverde/UICollectionView-stretch-header-like-Twitter/blob/master/LICENCE.md?at=master)
+
 
 Written in Swift 3.0 on XCode 8.3.2.
+
+This example is made to be light and easy to implement.
+
+Basicaly copy and paste the interest part of yours.
+
+- [] Describe the code here to make more easy to understand what part is important to copy;
+
 
 
 Features
 --------
 ![](stretch_header.gif)
-
-
 
 Author
 ------
