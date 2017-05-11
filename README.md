@@ -11,7 +11,7 @@ This example is made to be light and easy to implement.
 
 Basicaly copy and paste the interest part of yours.
 
-- [] Describe the code here to make more easy to understand what part is important to copy;
+- [ ] Describe the code here to make more easy to understand what part is important to copy;
 
 
 
