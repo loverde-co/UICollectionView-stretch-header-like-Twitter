@@ -21,6 +21,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var imageViewHeader: UIImageView!
     var imageBlurHeader: UIImageView!
     
+    var initialConstraints = [NSLayoutConstraint]()
+    
     // Instantiate custom Header Collection
     
     var headerCollection : HeaderCollectionView! = HeaderCollectionView()
@@ -41,6 +43,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -48,18 +52,31 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Change Z Position of Burger Button to not stay behinde header
         self.btMenu.layer.zPosition = 3
         
+        
         // Create header image
         imageViewHeader = UIImageView(frame: headerView.bounds)
         imageViewHeader?.image = UIImage(named: "HeaderBG")
         imageViewHeader?.contentMode = UIViewContentMode.scaleAspectFill
+        imageViewHeader.translatesAutoresizingMaskIntoConstraints = false
         headerView.insertSubview(imageViewHeader, belowSubview: lblHeader)
+        let leadConstraint = imageViewHeader.leadingAnchor.constraint(equalTo: self.view.leadingAnchor)
+        let trailingConstraint = imageViewHeader.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
+        
+        initialConstraints.append(contentsOf: [leadConstraint, trailingConstraint])
+        NSLayoutConstraint.activate(initialConstraints)
         
         // Create a blurred image
         imageBlurHeader = UIImageView(frame: headerView.bounds)
         imageBlurHeader?.image = UIImage(named: "HeaderBG")?.blurredImage(withRadius: 10, iterations: 20, tintColor: UIColor.clear)
         imageBlurHeader?.contentMode = UIViewContentMode.scaleAspectFill
         imageBlurHeader?.alpha = 0.0
+        imageBlurHeader.translatesAutoresizingMaskIntoConstraints = false
         headerView.insertSubview(imageBlurHeader, belowSubview: lblHeader)
+        let leadConstraintImageBlurHeader = imageBlurHeader.leadingAnchor.constraint(equalTo: self.view.leadingAnchor)
+        let trailingConstraintImageBlurHeader = imageBlurHeader.trailingAnchor.constraint(equalTo: self.view.trailingAnchor)
+        
+        initialConstraints.append(contentsOf: [leadConstraintImageBlurHeader, trailingConstraintImageBlurHeader])
+        NSLayoutConstraint.activate(initialConstraints)
         
         headerView.clipsToBounds = true
     }

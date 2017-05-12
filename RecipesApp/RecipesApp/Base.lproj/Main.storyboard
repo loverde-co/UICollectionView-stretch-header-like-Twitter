@@ -122,10 +122,13 @@
                                                 <constraint firstAttribute="trailing" secondItem="aJn-oZ-rC1" secondAttribute="trailing" constant="8" id="yQ1-Tq-Rt2"/>
                                             </constraints>
                                         </view>
-                                        <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="User" translatesAutoresizingMaskIntoConstraints="NO" id="1la-lb-3pd" customClass="AvatarImageView" customModule="RecipesApp" customModuleProvider="target">
+                                        <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="User" translatesAutoresizingMaskIntoConstraints="NO" id="1la-lb-3pd" customClass="AvatarImageView" customModule="RecipesApp" customModuleProvider="target">
                                             <rect key="frame" x="157" y="64" width="60" height="60"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="E3k-i6-Jyg"/>
+                                                <constraint firstAttribute="width" constant="60" id="pQt-6Q-bEz"/>
+                                            </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="daniel@loverde.com.br" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldl-Yt-XHs">
                                             <rect key="frame" x="79" y="145" width="216" height="21"/>
@@ -143,7 +146,9 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="ldl-Yt-XHs" secondAttribute="trailing" constant="72" id="DJp-Nd-nQM"/>
                                         <constraint firstAttribute="bottom" secondItem="JMU-D3-bia" secondAttribute="bottom" id="DYb-K3-wBm"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="qWr-Yj-Sz0" secondAttribute="trailing" constant="115" id="Vhd-Py-4gu"/>
+                                        <constraint firstItem="qWr-Yj-Sz0" firstAttribute="top" secondItem="1la-lb-3pd" secondAttribute="bottom" constant="-2" id="W8w-JF-yig"/>
                                         <constraint firstItem="JMU-D3-bia" firstAttribute="leading" secondItem="say-mP-Yk4" secondAttribute="leading" id="h0L-eM-nyO"/>
+                                        <constraint firstItem="1la-lb-3pd" firstAttribute="centerX" secondItem="say-mP-Yk4" secondAttribute="centerX" id="inn-0c-vAE"/>
                                         <constraint firstAttribute="trailing" secondItem="JMU-D3-bia" secondAttribute="trailing" id="sGP-AP-9QN"/>
                                         <constraint firstItem="JMU-D3-bia" firstAttribute="top" secondItem="ldl-Yt-XHs" secondAttribute="bottom" constant="2" id="t0N-vf-LJD"/>
                                         <constraint firstItem="qWr-Yj-Sz0" firstAttribute="leading" secondItem="say-mP-Yk4" secondAttribute="leadingMargin" constant="114" id="vsN-6l-Hjr"/>
